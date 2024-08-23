@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 16px;
+
+  color: var(--lavka-ui-kit-color-text);
+  border-radius: 24px;
+  background-color: var(--lavka-ui-kit-color-bg);
+  box-shadow: $shadow-modal;
+}
+
+.icon,
+.title {
+  margin-bottom: 8px;
+}
+
+.content {
+  padding: 16px 16px 12px;
+}
+
+.buttonRow {
+  display: flex;
+
+  padding: 0 12px 12px;
+}
+
+.button + .button {
+  margin-left: 8px;
+}

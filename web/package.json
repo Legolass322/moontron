@@ -2,32 +2,53 @@
   "name": "web",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "webpack serve --env mode=development",
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production",
+    "build:mobile": "webpack --env mode=production --env platform=mobile",
+    "build:desktop": "webpack --env mode=production --env platform=desktop",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "typecheck": "tsc"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.20.1",
     "antd": "^5.20.2",
+    "classnames": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1"
+    "react-router-dom": "^6.26.1",
+    "storeon": "^3.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@types/node": "^22.5.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
     "globals": "^15.9.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "postcss-loader": "^8.1.1",
+    "react-refresh-typescript": "^2.0.9",
     "sass-embedded": "^1.77.8",
-    "typescript": "^5.5.3",
+    "sass-loader": "^16.0.1",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "webpack": "^5.94.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }

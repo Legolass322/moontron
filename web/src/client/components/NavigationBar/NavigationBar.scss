@@ -1,0 +1,50 @@
+.root {
+  display: flex;
+
+  /** todo */
+  padding: 24px 80px;
+  /** todo */
+  background-color: #171424;
+}
+
+.logo, .action {
+  flex: 0 0 100px;
+}
+
+.linksWrapper {
+  display: flex;
+
+  justify-content: center;
+  
+  flex: 1 1 0;
+}
+
+.links {
+  display: flex;
+
+  gap: 16px;
+}
+
+.link {
+  position: relative;
+
+  text-decoration: none;
+  color: #3b3645;
+
+  &.active {
+    color: #2E9597;
+    
+    &::after {
+      content: '';
+      
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+
+      height: 2px;
+      
+      background-color: #2E9597;
+    }
+  }
+}
